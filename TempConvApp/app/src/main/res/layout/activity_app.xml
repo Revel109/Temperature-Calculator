@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.wordpress.revelyusuf.tempconvapp.AppActivity"
+    android:id="@+id/btn"
+    android:onClick="setContentView"
+    android:background="#04738f">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Temperature Converter"
+        android:id="@+id/textView"
+        android:textSize="35dp"
+        android:textAlignment="center"
+        android:textColor="#0b4bec"
+        android:background="#d083f446"
+        android:textIsSelectable="false"
+        android:textStyle="bold"
+        android:onClick="hideKeyboard"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number|numberSigned|numberDecimal"
+        android:ems="10"
+        android:id="@+id/textbox"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="40dp"
+        android:hint="Enter Temperature"
+        android:textStyle="bold"
+        android:textSize="25dp"
+
+        android:textColor="@android:color/holo_red_light"
+        android:layout_marginRight="40dp"
+        android:width="400dp"
+        android:layout_alignEnd="@+id/button" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textbox"
+        android:layout_centerHorizontal="true"
+        android:onClick="hideKeyboard"
+        android:layout_marginTop="70dp"
+        android:id="@+id/tempbox">
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Celsius to Farenheit"
+            android:onClick="hideKeyboard"
+            android:id="@+id/c2f"
+            android:textSize="30dp" />
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Farenheit to Celsius"
+            android:onClick="hideKeyboard"
+            android:id="@+id/f2c"
+            android:textSize="30dp" />
+    </RadioGroup>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Convert"
+        android:id="@+id/button"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:textSize="30dp"
+        android:textColor="#f17209"
+        android:textAlignment="center"
+        android:layout_below="@+id/tempbox"
+        android:onClick="hideKeyboard"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" />
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ratingBar"
+        android:onClick="hideKeyboard"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/button" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/result"
+        android:layout_below="@+id/textbox"
+        android:layout_alignParentEnd="true"
+        android:width="100dp"
+        android:height="50dp"
+        android:layout_alignParentStart="true"
+        android:text="Result"
+        android:onClick="hideKeyboard"
+        android:textColor="#f30606"
+        android:textSize="30dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RS"
+        android:id="@+id/reset"
+        android:layout_alignTop="@+id/textbox"
+        android:layout_alignEnd="@+id/result"
+        android:layout_toEndOf="@+id/textbox"
+        android:textColor="#081ae4"
+        android:textSize="25dp"
+        android:background="@color/colorAccent"
+        android:width="100dp"
+        android:onClick="hideKeyboard"
+        android:layout_marginRight="5dp" />
+
+
+</RelativeLayout>
